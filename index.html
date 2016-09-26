@@ -23,7 +23,8 @@
     }
     document.addEventListener("click", function(event) {
     console.log(event);
-    alert("You clicked the DIV element! " + event.srcElement.href);
+    alert("You clicked the DIV element! " + event.target.href);
+    event.stopPropagation();
 }, true);
   </script>
 </body></html>
