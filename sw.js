@@ -6,7 +6,7 @@ this.onfetch = function(event) {
   console.log(".respondWith", event.respondWith);
   console.log(".default", event.default);
 
-  if (event.respondWith) {
+  if (event.respondWith && event.request.url != 'https://johnerikhalse.github.io/sw/') {
     event.respondWith(new Response(new Blob(["Hello <b>world</b>"], {type : 'text/html'}), {
       headers: {"Content-Type": "text/html"}
     }));
