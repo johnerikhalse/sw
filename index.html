@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta referrer="origin">    </head>
+<html><head></head>
 <body><script>
     navigator.serviceWorker.register('sw.js', {
       scope: './'
     });
+    var x = document.links;
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].href = 'resource/#' + x[i].href;
+    }
   </script>
 
   <a href="local.html">Local link</a><br/>
