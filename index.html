@@ -21,5 +21,9 @@
     for (i = 0; i < x.length; i++) {
         x[i].href = 'resource/#' + x[i].href;
     }
+    document.addEventListener("click", function(event) {
+    console.log(event);
+    alert("You clicked the DIV element! " + event.srcElement.href);
+}, true);
   </script>
 </body></html>
