@@ -16,7 +16,7 @@ Location.prototype.assign = function(uri) {
 
   <a href="local.html">Local link</a><br/>
   <a href="https://help.github.com">Remote link</a><br/>
-  <a onclick="window.location='http://vg.no';">Click me</a>
+  <a onclick="window.location='http://vg.no';">Click me</a><br/>
   
   <iframe id="frame1" src="local.html"></iframe><br/>
   <iframe id="frame2" src="https://help.github.com"></iframe><br/>
@@ -32,7 +32,7 @@ Location.prototype.assign = function(uri) {
     document.addEventListener("click", function(event) {
     console.log(event);
     alert("You clicked the DIV element! " + event.target.href);
-    event.stopPropagation();
+    //event.stopPropagation();
 }, true);
   </script>
 </body></html>
