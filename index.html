@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html><head></head>
 <body><script>
+function reportIn(e){
+    var a = this.lastListenerInfo[this.lastListenerInfo.length-1];
+    console.log(a)
+}
+
+Location.prototype.assign = function(uri) {
+    alert("URI: " + uri);
+}
     navigator.serviceWorker.register('sw.js', {
       scope: './'
     });
